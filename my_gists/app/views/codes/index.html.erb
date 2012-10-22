@@ -1,0 +1,29 @@
+
+<table>
+  <tr>
+    <th>Imie</th>
+    <th>Nazwisko</th>
+    <th>Data_ur</th>
+
+    <th></th>
+    <th></th>
+    <th></th>
+	<th></th>
+  </tr>
+
+<% @codes.each do |code| %>
+  <tr>
+    <td><%= code.lang %></td>
+    <td><%= code.code %></td>
+    <td><%= code.desc %></td>
+	
+    <td><%= link_to 'Pokaż', code %></td>
+    <td><%= link_to 'Edytuj', edit_code_path(code) %></td>
+    <td><%= link_to 'Usun', code, method: :delete, data: { confirm: 'Jestes pewien' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Code', new_code_path %>
