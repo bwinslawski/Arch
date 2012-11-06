@@ -29,5 +29,6 @@ end
 
 # alternatywa dla serwera Webrick
 gem 'thin'
+gem 'paperclip', '~> 3.0'
 
 

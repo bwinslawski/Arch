@@ -3,4 +3,7 @@
   <h1><%=t '.title', :default => t('helpers.titles.new', :model => model_class.model_name.human,
                                  :default => "New #{model_class.model_name.human}") %></h1>
 </div>
+<%= form_for @fortune, :url => fortunes_path, :html => { :multipart => true } do |form| %>
+  <%= form.file_field :avatar %>
+<% end %>
 <%= render :partial => 'form' %>
