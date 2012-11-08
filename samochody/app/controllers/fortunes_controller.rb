@@ -24,7 +24,7 @@ class FortunesController < ApplicationController
   # GET /fortunes/new
   # GET /fortunes/new.json
   def new
-    @fortune = Fortune.new
+    @fortune = Fortune.new( params[:fortune] )
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,8 +40,8 @@ class FortunesController < ApplicationController
   # POST /fortunes
   # POST /fortunes.json
   def create
-    @fortune = Fortune.new(params[:fortune])
-  @fortune = Fortune.create( params[:fortune] )
+    #@fortune = Fortune.new(params[:fortune])
+	@fortune = Fortune.create( params[:fortune] )
     respond_to do |format|
       if @fortune.save
         format.html { redirect_to @fortune, notice: 'Fortune was successfully created.' }
