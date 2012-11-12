@@ -61,6 +61,6 @@ div.actions {
   list-style: square;
 }
 
-#container {
+.container {
   margin-top: 60px;
 }

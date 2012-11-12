@@ -17,7 +17,7 @@
   <tbody>
     <% @fortunes.each do |fortune| %>
       <tr>
-        <td><%= image_tag(fortune.avatar.url) if fortune.avatar? %></td>
+        <td><%= image_tag(fortune.avatar.url :thumb) if fortune.avatar? %></td>
         <td><%= link_to fortune.id, fortune_path(fortune) %></td>
         <td><%= fortune.quotation %></td>
         <td><%= fortune.source %></td>

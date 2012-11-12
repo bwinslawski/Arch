@@ -1,9 +1,10 @@
 class CreateFortunes < ActiveRecord::Migration
-  def self.up
-    add_attachment :fortunes, :avatar
-  end
-
-  def self.down
-    remove_attachment :fortunes, :avatar
+  def change
+    create_table :fortunes do |t|
+      t.text :quotation
+      t.string :source
+ 
+      t.timestamps
+    end
   end
 end

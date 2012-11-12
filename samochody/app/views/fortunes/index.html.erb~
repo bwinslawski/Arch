@@ -5,7 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:cover) %></th>
+      <th><%= model_class.human_attribute_name(:avatar) %></th>
       
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:quotation) %></th>
@@ -17,7 +17,7 @@
   <tbody>
     <% @fortunes.each do |fortune| %>
       <tr>
-       <td><%= link_to fortune.id, fortune_path(fortune) %></td>
+        <td><%= image_tag(fortune.avatar.url) if fortune.avatar? %></td>
         <td><%= link_to fortune.id, fortune_path(fortune) %></td>
         <td><%= fortune.quotation %></td>
         <td><%= fortune.source %></td>

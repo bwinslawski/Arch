@@ -11,14 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121108170156) do
+ActiveRecord::Schema.define(:version => 20121108190451) do
 
   create_table "fortunes", :force => true do |t|
     t.text     "quotation"
     t.string   "source"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
-    t.string   "cover"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
