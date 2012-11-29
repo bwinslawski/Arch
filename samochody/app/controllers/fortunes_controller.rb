@@ -1,5 +1,5 @@
 class FortunesController < ApplicationController
-  before_filter :authenticate_model!
+ 
 
   # GET /fortunes
   # GET /fortunes.json
