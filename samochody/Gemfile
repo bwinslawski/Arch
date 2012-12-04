@@ -33,3 +33,5 @@ end
 gem 'thin'
 gem 'paperclip', '~> 3.0'
 #gem 'rmagick', '~> 2.13.1'
+gem 'omniauth'
+gem 'omniauth-facebook'

@@ -1,4 +1,10 @@
 Samochody::Application.routes.draw do
+  get "sessions/new"
+
+  get "sessions/create"
+
+  get "sessions/failure"
+
   resources :fortunes
 
   # The priority is based upon order of creation:
@@ -58,4 +64,9 @@ Samochody::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 	root :to => 'fortunes#index'
+get '/logout', :to => 'sessions#destroy'
+	get   '/login', :to => 'sessions#new', :as => :login
+	match '/auth/:provider/callback', :to => 'sessions#create'
+	match '/auth/failure', :to => 'sessions#failure'
+	match '/signout' => 'sessions#destroy', :as => :signout
 end

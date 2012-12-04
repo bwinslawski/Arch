@@ -48,9 +48,18 @@
           <%= link_to 'Samochody', fortunes_path, :class => 'brand' %>
           <div class="container nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+              <li><%= link_to "Connect With Facebook", "/auth/facebook" %></li>
+              <li><%= link_to "Connect With Facebook", "/auth/facebook" %></li>
+              <li>
+
+<% if current_user %>
+  Welcome <%= current_user.name %>!
+  <%= link_to "Sign Out", "/signout" %>
+<% else %>
+  <%= link_to "Connect With Facebook", "/auth/facebook" %>
+<% end %>
+
+</li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
