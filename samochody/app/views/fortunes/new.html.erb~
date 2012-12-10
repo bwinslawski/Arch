@@ -5,8 +5,8 @@
 </div>
 <% form_for @fortune, :url => fortunes_path, :html => { :multipart => true } do |form| %>
   <%= form.file_field :avatar %>
-  <%= form.text_area :quotation %>
-  <%= form.text_field :source %>
+  <%= form.text_area :quotation :label => "Opis" %>
+  <%= form.text_field :source :label => "Pochodzenie" %>%>
   <div class="form-actions">
     <%= form.button :submit, :class => 'btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

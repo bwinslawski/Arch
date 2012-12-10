@@ -11,3 +11,16 @@
  *= require_self
  *= require_tree .
  */
+#log{
+padding: 10px;
+margin: 20px;
+float: right;
+}
+#container nav-collapse
+{
+
+padding: 10px;
+margin: 20px;
+float: right;
+
+}
